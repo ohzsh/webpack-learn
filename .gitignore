@@ -1,2 +1,4 @@
 node_modules
 dist
+src/lib-pack/node_modules
+src/lib-pack/dist
