@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtiactPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -93,10 +94,12 @@ module.exports = {
         preserveLineBreaks: false,
       },
     }),
+    new FriendlyErrorsWebpackPlugin(),
   ],
 
   devServer: {
     contentBase: './public',
+    stats: 'errors-only',
     open: true,
     hot: true,
   },

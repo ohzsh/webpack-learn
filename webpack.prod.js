@@ -1,6 +1,8 @@
 const path = require('path');
 const MiniCssExtiactPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { glob } = require('glob');
 
@@ -38,6 +40,7 @@ const { entry, HtmlWebpackPlugins } = setMPA();
 
 module.exports = {
   mode: 'production',
+  stats: 'errors-only',
   // devtool: 'source-map',
   devtool: false,
   entry,
@@ -110,6 +113,7 @@ module.exports = {
     new MiniCssExtiactPlugin({
       filename: 'css/[name]_[contenthash:8].css',
     }),
+    new FriendlyErrorsWebpackPlugin(),
     ...HtmlWebpackPlugins,
   ],
 

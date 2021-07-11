@@ -38,7 +38,8 @@ const setMPA = () => {
 const { entry, HtmlWebpackPlugins } = setMPA();
 
 module.exports = {
-  mode: 'none',
+  mode: 'production',
+  stats: 'errors-only',
   // devtool: 'source-map',
   devtool: false,
   entry,
