@@ -12,7 +12,7 @@ const setMPA = () => {
   const HtmlWebpackPlugins = [];
   const entryFiles = glob.sync(path.join(__dirname, '/src/pages/*/index.js'));
 
-  Object.keys(entryFiles).map((index) => {
+  Object.keys(entryFiles).forEach((index) => {
     const entryFile = entryFiles[index];
     const pageName = entryFile.match(/src\/pages\/(.*)\/index\.js/)[1];
     entry[pageName] = entryFile;
