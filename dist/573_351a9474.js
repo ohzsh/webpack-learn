@@ -1,1 +1,0 @@
-(self.webpackChunkwebpack=self.webpackChunkwebpack||[]).push([[573],{573:function(e,n,t){"use strict";t.r(n);var u=t(466);n.default=function(){return u.createElement("div",null,"动态import组件")}}}]);
