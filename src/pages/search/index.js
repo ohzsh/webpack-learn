@@ -8,7 +8,23 @@ import { helloworld } from '../index/hello-world';
 import { a } from './tree-shaking';
 document.write(helloworld())
 class Search extends React.Component {
+  constructor() {
+   super(...arguments)
+   this.state = { 
+    TestDynamic: null
+   } 
+  }
+
+  loadComponent() {
+    import('./test-dynamic.js').then((TestDynamic)=>{
+      this.setState({
+        TestDynamic: TestDynamic.default
+      })
+    })
+  }
+
   render() { 
+    const { TestDynamic } = this.state
     return <div className="search-text">
       <img src={logo} />
       React Dom Redner {a()}
@@ -16,6 +32,8 @@ class Search extends React.Component {
         <img src={test2} />
         <img src={test1} />
       </div>
+      <div onClick={this.loadComponent.bind(this)}>点击加载动态组件</div>
+      { TestDynamic ? <TestDynamic/> : '等待加载' }
     </div>
   }
 }
