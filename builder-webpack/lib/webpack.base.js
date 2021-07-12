@@ -9,14 +9,14 @@
 const path = require('path');
 const MiniCssExtiactPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { glob } = require('glob');
 
 /**
  * 设置多页面打包
  */
- const setMPA = () => {
+const setMPA = () => {
   const entry = {};
   const HtmlWebpackPlugins = [];
   const entryFiles = glob.sync(path.join(__dirname, '/src/pages/*/index.js'));
@@ -47,7 +47,7 @@ const { entry, HtmlWebpackPlugins } = setMPA();
 
 module.exports = {
   entry,
-  stats: 'errors-only', 
+  stats: 'errors-only',
   module: {
     rules: [
       {
@@ -114,5 +114,5 @@ module.exports = {
     new CleanWebpackPlugin(),
     new FriendlyErrorsWebpackPlugin(),
     ...HtmlWebpackPlugins,
-  ]
-}
+  ],
+};

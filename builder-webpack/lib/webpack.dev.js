@@ -7,7 +7,8 @@
  * @FilePath: /webpack/builder-webpack/lib/webpack.dev.js
  */
 const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base')
+const baseConfig = require('./webpack.base');
+
 const devConfig = {
   mode: 'development',
   devtool: 'cheap-source-map',
@@ -17,6 +18,6 @@ const devConfig = {
     open: true,
     hot: true,
   },
-}
+};
 
-module.exports = merge(baseConfig, devConfig)
+module.exports = merge(baseConfig, devConfig);

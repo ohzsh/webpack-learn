@@ -3,14 +3,14 @@
  * @Date: 2021-07-12 08:04:53
  * @LastEditTime: 2021-07-12 08:25:33
  * @LastEditors: json
- * @Description: ssr 
+ * @Description: ssr
  * @FilePath: /webpack/builder-webpack/lib/webpack.ssr.js
  */
 const cssnano = require('cssnano');
 const merge = require('webpack-merge');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const baseConfig = require('./webpack.base')
+const baseConfig = require('./webpack.base');
 
 const prodConfig = {
   mode: 'production',

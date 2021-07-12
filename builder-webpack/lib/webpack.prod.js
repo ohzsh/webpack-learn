@@ -7,7 +7,8 @@
  * @FilePath: /webpack/builder-webpack/lib/webpack.prod.js
  */
 const merge = require('webpack-merge');
-const baseConfig = require('./webpack.base')
+const baseConfig = require('./webpack.base');
+
 const prodConfig = {
   mode: 'production',
   // 拆分公共模块
@@ -22,6 +23,6 @@ const prodConfig = {
       },
     },
   },
-}
+};
 
-module.exports = merge(baseConfig, prodConfig) 
+module.exports = merge(baseConfig, prodConfig);
