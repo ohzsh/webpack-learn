@@ -10,10 +10,7 @@
   "keywords": [],
   "author": "mr.zhou <zzmy1995@gmail.com>",
   "license": "ISC",
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.30.0",
-    "eslint-config-airbnb-base": "^14.2.1",
+  "dependencies": {
     "webpack-merge": "^5.8.0",
     "mini-css-extract-plugin": "^2.1.0",
     "html-webpack-plugin": "^5.3.2",
@@ -21,5 +18,10 @@
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "glob": "^7.1.7",
     "autoprefixer": "^10.2.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.30.0",
+    "eslint-config-airbnb-base": "^14.2.1"
   }
 }
